@@ -4,143 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        min-height: 100vh;
-        width: 100%;
-        overflow-x: hidden;
-        background-color: #afd3e2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      form {
-        width: 80%;
-        margin: 20px 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #f6f1f1;
-        color: #146c94;
-        box-shadow: 0px 0px 6px rgb(58, 57, 57);
-        row-gap: 20px;
-      }
-      .nav {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #f6f1f1;
-        font-size: 29px;
-      }
-      .nav div {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        background-color: #19a7ce;
-      }
-      .inputField {
-        width: 100%;
-        min-height: 150px;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 50px;
-        row-gap: 25px;
-        justify-content: center;
-        padding-top: 10px;
-      }
-      .inputField:hover {
-        background-color: #19a7ce;
-      }
-      h1 {
-        width: 100%;
-        text-align: center;
-      }
-      .fName,
-      .lName,
-      .phone,
-      .email {
-        width: 49%;
-        height: 40px;
-        outline: none;
-        padding: 0px 10px;
-        border: none;
-        box-shadow: 0px 0px 1px gray;
-        color: #146c94;
-      }
-      .name,
-      .data {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-      .rate {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-      }
-      .rate span {
-        height: 40px;
-        width: 40px;
-        background-color: rgba(0, 0, 0, 0.293);
-        color: #f6f1f1;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0px 0px 5px gray;
-        transition: 0.5s;
-      }
-      .rate span:hover {
-        background-color: #f6f1f1;
-        color: rgba(0, 0, 255, 0.551);
-      }
-      .rate span:active {
-        box-shadow: inset 0px 0px 5px gray;
-      }
-      textarea {
-        margin-bottom: 20px;
-        padding: 10px;
-        outline: none;
-        font-size: 20px;
-
-        box-shadow: inset 0px 0px 2px #146c94;
-      }
-      .submit {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 20px;
-      }
-      button {
-        height: 40px;
-        width: 150px;
-        cursor: pointer;
-        border: none;
-        background-color: #19a7ce;
-        color: #f6f1f1;
-        font-weight: bold;
-      }
-      .rate span.selected {
-        background-color: blue;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <form>
       <div class="nav">
-        <div>Customer Review Form</div>
+        <a>Review Form</a>
+        <a href="/reviews.html">Reviews</a>
       </div>
       <h1>Hello, We'd love to hear feedback from our customers</h1>
       <div class="inputField">
@@ -210,59 +80,6 @@
       </div>
       <div class="submit"><button>Submit</button></div>
     </form>
-    <script>
-      let quality = document.querySelectorAll('.quality span');
-      let service = document.querySelectorAll('.service span');
-      let experience = document.querySelectorAll('.experience span');
-      let price = document.querySelectorAll('.price span');
-      let staff = document.querySelectorAll('.staff span');
-      let selector = function (select) {
-        for (let index = 0; index < select.length; index++) {
-          select[index].addEventListener('click', function () {
-            select.forEach((q) => q.classList.remove('selected'));
-            select[index].classList.add('selected');
-          });
-        }
-      };
-      selector(quality);
-      selector(service);
-      selector(experience);
-      selector(price);
-      selector(staff);
-
-      let submit = document.querySelector('button');
-      submit.addEventListener('click', function (e) {
-        e.preventDefault();
-        let firstName = document.querySelector('.fName').value;
-        let lastName = document.querySelector('.lName').value;
-        let fullName = `${firstName} ${lastName}`;
-        let qualityRate = document.querySelector(
-          '.quality span.selected'
-        )?.innerHTML;
-        let serviceRate = document.querySelector(
-          '.service span.selected'
-        )?.innerHTML;
-        let experienceRate = document.querySelector(
-          '.experience span.selected'
-        )?.innerHTML;
-        let priceRate = document.querySelector(
-          '.price span.selected'
-        )?.innerHTML;
-        let staffRate = document.querySelector(
-          '.staff span.selected'
-        )?.innerHTML;
-        let feedback = document.querySelector('textarea').value;
-        let reviewData = {
-          fullName,
-          qualityRate,
-          serviceRate,
-          experienceRate,
-          priceRate,
-          staffRate,
-          feedback,
-        };
-        console.log(reviewData);
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
