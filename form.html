@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="nav">
+        <a>Review Form</a>
+        <a href="/reviews.html">Reviews</a>
+      </div>
+      <h1>Hello, We'd love to hear feedback from our customers</h1>
+      <div class="inputField">
+        <h2>Customer Name</h2>
+        <div class="name">
+          <input
+            type="text"
+            class="fName"
+            placeholder="First Name"
+            maxlength="20"
+            required
+          />
+          <input
+            type="text"
+            class="lName"
+            placeholder="Last Name"
+            maxlength="20"
+            required
+          />
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Customer Data</h2>
+        <div class="data">
+          <input
+            type="number"
+            class="phone"
+            placeholder="Phone Number"
+            maxlength="20"
+          />
+          <input type="email" class="email" placeholder="Email Address" />
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Quality Rating</h2>
+        <div class="rate quality">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Service Rating</h2>
+        <div class="rate service">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Experience Rating</h2>
+        <div class="rate experience">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Price Rating</h2>
+        <div class="rate price">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Staff Rating</h2>
+        <div class="rate staff">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+      <div class="inputField">
+        <h2>Feedback</h2>
+        <textarea cols="30" rows="10" placeholder="Type Here ..."></textarea>
+      </div>
+      <div class="submit"><button>Submit</button></div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

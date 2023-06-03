@@ -1,0 +1,38 @@
+[
+  {
+    "fullName": "Ahmed Gamal",
+    "qualityRate": 5,
+    "serviceRate": 4,
+    "experienceRate": 5,
+    "priceRate": 3,
+    "staffRate": 2,
+    "feedback": "very good"
+  },
+  {
+    "fullName": "Ahmed Gamal",
+    "qualityRate": 5,
+    "serviceRate": 4,
+    "experienceRate": 5,
+    "priceRate": 3,
+    "staffRate": 2,
+    "feedback": "very good"
+  },
+  {
+    "fullName": "ahmed gamal",
+    "qualityRate": "2",
+    "serviceRate": "4",
+    "experienceRate": "4",
+    "priceRate": "5",
+    "staffRate": "3",
+    "feedback": "a5eran"
+  },
+  {
+    "fullName": "mohamed ahmed",
+    "qualityRate": "2",
+    "serviceRate": "4",
+    "experienceRate": "2",
+    "priceRate": "4",
+    "staffRate": "5",
+    "feedback": "cant say good"
+  }
+]
