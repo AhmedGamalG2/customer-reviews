@@ -22,11 +22,14 @@ selector(staff);
 let headers = new Headers();
 headers.set('Content-Type', 'application/json');
 async function addReview(rev) {
-  const response = await fetch(`http://127.0.0.1:3000/reviews`, {
-    method: 'POST',
-    headers: headers,
-    body: JSON.stringify(rev),
-  });
+  const response = await fetch(
+    `https://customer-reviews-api.onrender.com/reviews`,
+    {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(rev),
+    }
+  );
   const jsonData = await response.json();
   console.log(jsonData.status);
 }

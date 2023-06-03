@@ -2,10 +2,13 @@ let reviews = document.querySelector('.reviews');
 let headers = new Headers();
 headers.set('Content-Type', 'application/json');
 async function getReviews() {
-  const response = await fetch(`http://127.0.0.1:3000/reviews`, {
-    method: 'GET',
-    headers: headers,
-  });
+  const response = await fetch(
+    `https://customer-reviews-api.onrender.com/reviews`,
+    {
+      method: 'GET',
+      headers: headers,
+    }
+  );
   const jsonData = await response.json();
   console.log(jsonData.newData);
   jsonData.newData.map((review) => {
