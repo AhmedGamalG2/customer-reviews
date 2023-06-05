@@ -38,7 +38,7 @@ async function addReview(rev) {
     }
   );
   const jsonData = await response.json();
-  console.log(jsonData.status);
+  if (jsonData.status) location.reload();
 }
 let submit = document.querySelector('button');
 submit.addEventListener('click', function (e) {
